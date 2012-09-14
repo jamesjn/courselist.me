@@ -3,7 +3,7 @@ CourselistMe::Application.routes.draw do
 
   devise_for :users
 
-  resources :user, :only => :show
+  resources :users, :only => :show
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
