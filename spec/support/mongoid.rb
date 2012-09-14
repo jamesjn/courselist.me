@@ -1,3 +1,3 @@
-RSpec.configure do |config|
-  config.include Mongoid::Matchers
-end
+RSpec.configure do |config| 
+  config.include Mongoid::Matchers 
+end 

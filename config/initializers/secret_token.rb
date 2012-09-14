@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-CourselistMe::Application.config.secret_token = '9544071c4fd37a81e17b44b7fbf17481130d42bd1da54c2e9064ce315b8b22011f13f5051f52abc7c455f15a9d47150be4cb6d507865a6a726882e1f6998acfe'
+CourselistMe::Application.config.secret_token = 'c158eab679e79e6e46134db538741004ad0568992da697c762c5eca73d514dfdff19867cc92199bb5641d78b93bec6f0ac03718b5d865ef5835bdbcc5c9ece01'
