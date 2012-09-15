@@ -10,9 +10,9 @@ describe HomeController do
     end
 
     it "sets users" do
-      User.should_receive(:all).and_return(users = mock)
+      Course.should_receive(:all).and_return(courses = mock(:each => nil))
       get 'index'
-      assigns(:users).should == users
+      assigns(:courses).should == courses
     end
 
     it "renders index" do
@@ -21,7 +21,7 @@ describe HomeController do
     end
 
     it "renders users" do
-      FactoryGirl.create(:user)
+      FactoryGirl.create(:courses)
       get 'index'
     end
 
