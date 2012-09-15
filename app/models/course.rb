@@ -27,7 +27,7 @@ class Course
         instructor: c['instructor'],
         categories: c['categories'].map{|cat| cat["name"]},
         name: c['name'],
-        start_date: c['courses'].map{|course| course["start_date_string"] unless course["start_date_string"].blank? },
+        start_date: c['courses'].map{|course| course["start_date_string"] unless course["start_date_string"].empty?},
         home_link: c['courses'].map{|course| course["home_link"]},
         duration: c['courses'].map{|course| course["duration_string"]},
         small_icon: c['small_icon']
