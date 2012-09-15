@@ -19,3 +19,4 @@ gem 'bootstrap-sass'
 gem 'heroku'
 gem 'thin'
 gem 'database_cleaner', :group => [:test]
+gem 'twitter-bootstrap-rails', :group => :assets

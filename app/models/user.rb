@@ -2,7 +2,7 @@ class User
   include Mongoid::Document
 
   field :name
-  validates_presence_of :name
+  validates_presence_of :name, :email, :password, :password_confirmation, :remember_me
   validates_uniqueness_of :name, :email, :case_sensitive => false
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
  
