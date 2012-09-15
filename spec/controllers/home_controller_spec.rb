@@ -21,7 +21,7 @@ describe HomeController do
     end
 
     it "renders users" do
-      FactoryGirl.create(:courses)
+      FactoryGirl.create(:course)
       get 'index'
     end
 

@@ -1,4 +1,21 @@
 <h3>Courses</h3>
+<table class = "table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>University</th>
+      <th>Instructor</th>
+      <th>Dates</th>
+    </tr>
+  </thead>
+  <tbody>
 <% @courses.each do |course| %>
-  <p>Course name: <%= course.name %></p>
+  <tr>
+    <td><%= course.name %></td>
+    <td><%= course.university %></td>
+    <td><%= course.instructor %></td>
+    <td><%= course.start_date %></td>
+  </tr>
 <% end %>
+  </tbody>
+</table>
