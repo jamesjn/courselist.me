@@ -1,8 +1,9 @@
 <h3>Courses</h3>
-<table class="table table-sortable">
+<table class="table-striped table-sortable table-hover">
   <thead>
     <tr>
       <th>Name</th>
+      <th>Company</th>
       <th>University</th>
       <th>Instructor</th>
       <th>Dates</th>
@@ -12,8 +13,9 @@
 <% @courses.each do |course| %>
   <tr>
     <td><%= course.name %></td>
-    <td><%= course.university %></td>
-    <td><%= course.instructor %></td>
+    <td><%= course.company%></td>
+    <td><%= course.university.capitalize %></td>
+    <td><%= course.instructor.split(',').first %></td>
     <td><%= start_date(course.start_date.last) %></td>
   </tr>
 <% end %>

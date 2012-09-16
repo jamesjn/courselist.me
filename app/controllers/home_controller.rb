@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     if date.blank?
      "TBD" 
     else
-      date
+      Date.parse(date).to_s
     end
   end
 end

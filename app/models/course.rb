@@ -1,6 +1,6 @@
 class Course
   include Mongoid::Document
-  attr_accessible :preview_link, :video, :university, :description, :social_link, :instructor, :categories, :name, :start_date, :home_link, :duration, :small_icon
+  attr_accessible :preview_link, :video, :university, :description, :social_link, :instructor, :categories, :name, :start_date, :home_link, :duration, :small_icon, :company
 
   field :preview_link
   field :video
@@ -14,6 +14,7 @@ class Course
   field :home_link
   field :duration
   field :small_icon
+  field :company
 
   def self.load_coursera
     coursera_json = JSON.parse(File.read('json_data/coursera_list.json'))
@@ -30,7 +31,8 @@ class Course
         start_date: c['courses'].map{|course| course["start_date_string"] unless course["start_date_string"].blank?},
         home_link: c['courses'].map{|course| course["home_link"]},
         duration: c['courses'].map{|course| course["duration_string"]},
-        small_icon: c['small_icon']
+        small_icon: c['small_icon'],
+        company: 'Coursera'
       }
       self.create(entry)
     end

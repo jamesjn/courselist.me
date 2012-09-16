@@ -21,4 +21,13 @@ describe Course do
     course.duration.should == ["10 weeks", "10 weeks"]
     course.small_icon.should == "https//s3.amazonaws.com/coursera/topics/ml/small-icon.png"
   end
+
+  context "loading json data" do
+
+    it "can load coursera data properly" do
+      Course.load_coursera 
+      Course.count.should > 0
+      Course.first.name.should_not == nil
+    end
+  end
 end
