@@ -14,7 +14,7 @@
     <td><%= course.name %></td>
     <td><%= course.university %></td>
     <td><%= course.instructor %></td>
-    <td><%= course.start_date.last %></td>
+    <td><%= start_date(course.start_date.last) %></td>
   </tr>
 <% end %>
   </tbody>
