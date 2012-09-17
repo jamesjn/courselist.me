@@ -37,5 +37,24 @@ class Course
       self.create(entry)
     end
   end
+
+  def self.load_udacity
+    udacity_json = JSON.parse(File.read('json_data/udacity_list.json'))
+    courses = udacity_json.each do |c|
+      entry = {
+        video: c['teaser']['youtube_id'],
+        university: 'n/a',
+        description: c['search_description'],
+        social_link: "http://www.udacity.com/overview/#{c['path']}",
+        instructor: c['instructors'].map{|i| i['name']}.join(','),
+        categories: c['tags']['subjects'],
+        name: "#{c['name']}:#{c['title']}",
+        start_date: 'Now',
+        duration: 'n/a',
+        company: 'Udacity'
+      }
+      self.create(entry)
+    end
+  end
  
 end

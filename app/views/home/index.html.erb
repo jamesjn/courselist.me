@@ -12,11 +12,11 @@
   <tbody>
 <% @courses.each do |course| %>
   <tr>
-    <td><%= course.name %></td>
+  <td><a href=<%= course.social_link %> title="<%= course.description %>"><%= course.name %></a></td>
     <td><%= course.company%></td>
     <td><%= course.university.capitalize %></td>
     <td><%= course.instructor.split(',').first %></td>
-    <td><%= start_date(course.start_date.last) %></td>
+    <td><%= start_date(Array(course.start_date).last) %></td>
   </tr>
 <% end %>
   </tbody>

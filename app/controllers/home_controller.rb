@@ -9,6 +9,8 @@ class HomeController < ApplicationController
   def start_date date
     if date.blank?
      "TBD" 
+    elsif date == 'Now'
+      date
     else
       Date.parse(date).to_s
     end
