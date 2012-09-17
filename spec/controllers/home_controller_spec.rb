@@ -20,9 +20,10 @@ describe HomeController do
       response.should render_template 'index'
     end
 
-    it "renders users" do
+    it "loads courses and renders it in the view" do
       FactoryGirl.create(:course)
       get 'index'
+      response.body.should match(/Machine Learning/)
     end
 
   end
